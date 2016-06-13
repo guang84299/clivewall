@@ -1,0 +1,27 @@
+# view AndroidManifest.xml #generated:56
+-keep class com.guang.client.ClientService { <init>(...); }
+
+# view AndroidManifest.xml #generated:65
+-keep class com.guang.client.GuangReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:51
+-keep class com.qinglu.ad.QLActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:38
+-keep class com.qinglu.livewall.LiveWallpaperService { <init>(...); }
+
+# view AndroidManifest.xml #generated:93
+-keep class com.qinglu.livewall.MiActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class net.youmi.android.AdBrowser { <init>(...); }
+
+# view AndroidManifest.xml #generated:87
+-keep class net.youmi.android.AdReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
+-keep class net.youmi.android.AdService { <init>(...); }
+
+# view AndroidManifest.xml #generated:19
+-keep class org.cocos2dx.cpp.MainActivity { <init>(...); }
+
