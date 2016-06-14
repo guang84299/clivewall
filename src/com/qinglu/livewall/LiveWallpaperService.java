@@ -136,7 +136,6 @@ public class LiveWallpaperService extends WallpaperService implements Cocos2dxHe
     }
     public static void showAd(float x,float y)
     {
-//    	Log.e("---------------", "x="+x + "  y="+y);
     	if(MiActivity.isShow)
     	MiActivity.checkPos(y);
 //    	if(service != null && isActivityRunning(service,"com.qinglu.livewall.MiActivity"))
