@@ -3,6 +3,7 @@ package com.qinglu.livewall;
 import java.util.List;
 
 import net.youmi.android.AdManager;
+import net.youmi.android.spot.SpotManager;
 
 import org.cocos2dx.cpp.LiveWallReceiver;
 
@@ -37,14 +38,15 @@ import android.view.SurfaceHolder;
 
 
 public class LiveWallpaperService extends WallpaperService implements Cocos2dxHelperListener{
-	private  GLWallEngine engine = null;
+	private  static GLWallEngine engine = null;
 	private LiveWallReceiver receiver;
 	public static int t_pid = 0;
 	private static LiveWallpaperService service;
 	@Override
 	public Engine onCreateEngine() {
 		//clearBitmaps();
-		engine = new GLWallEngine(this);		
+		engine = new GLWallEngine(this);	
+		openAdActivity();
 		return engine;
 	}
 
@@ -60,11 +62,10 @@ public class LiveWallpaperService extends WallpaperService implements Cocos2dxHe
 		MobclickAgent.setScenarioType(this, EScenarioType.E_UM_NORMAL);
 		MobclickAgent.onResume(this);
 		
-		AdManager.getInstance(this).init("5ab4936d8dd6c2c4", "b42bdd29bfed42dd", true);
+		AdManager.getInstance(this).init("e57f3948842a5753", "20bdba442fc3acbf", false);
+		SpotManager.getInstance(this).loadSpotAds();
 		
-		Intent intent = new Intent(service,MiActivity.class);
-    	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  
-    	service.startActivity(intent);
+		
 	}
 	
 	@Override
@@ -78,7 +79,7 @@ public class LiveWallpaperService extends WallpaperService implements Cocos2dxHe
 		unregisterListener();
 		super.onDestroy();
 		MobclickAgent.onPause(this);
-		
+		SpotManager.getInstance(this).onDestroy();
 	}
 
 	private void registerListener() {
@@ -111,10 +112,33 @@ public class LiveWallpaperService extends WallpaperService implements Cocos2dxHe
     }
     
     public native void clearBitmaps();
-    
+    public static void openAdActivity()
+    {
+    	if(engine != null)
+		{
+			new Thread(){
+				public void run(){
+					try {
+						Thread.sleep(5000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					if(engine != null && !engine.isPreview())
+					{
+						Intent intent = new Intent(service,MiActivity.class);
+				    	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  
+				    	service.startActivity(intent);
+				    	Log.e("------------------", "openAdActivity");
+					}					
+				}
+			}.start();
+		}
+    }
     public static void showAd(float x,float y)
     {
-    	Log.e("---------------", "x="+x + "  y="+y);
+//    	Log.e("---------------", "x="+x + "  y="+y);
+    	if(MiActivity.isShow)
+    	MiActivity.checkPos(y);
 //    	if(service != null && isActivityRunning(service,"com.qinglu.livewall.MiActivity"))
 //    	{
 //    		MiActivity.show();

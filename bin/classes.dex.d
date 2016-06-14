@@ -26,6 +26,8 @@
 /Users/guang/Documents/work/cocos-proj/clivewall/proj.android/bin/classes/com/qinglu/livewall/LiveWallpaperService.class \
 /Users/guang/Documents/work/cocos-proj/clivewall/proj.android/bin/classes/com/qinglu/livewall/Manifest$permission.class \
 /Users/guang/Documents/work/cocos-proj/clivewall/proj.android/bin/classes/com/qinglu/livewall/Manifest.class \
+/Users/guang/Documents/work/cocos-proj/clivewall/proj.android/bin/classes/com/qinglu/livewall/MiActivity$1.class \
+/Users/guang/Documents/work/cocos-proj/clivewall/proj.android/bin/classes/com/qinglu/livewall/MiActivity$2.class \
 /Users/guang/Documents/work/cocos-proj/clivewall/proj.android/bin/classes/com/qinglu/livewall/MiActivity.class \
 /Users/guang/Documents/work/cocos-proj/clivewall/proj.android/bin/classes/com/qinglu/livewall/R$array.class \
 /Users/guang/Documents/work/cocos-proj/clivewall/proj.android/bin/classes/com/qinglu/livewall/R$attr.class \
