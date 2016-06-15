@@ -3,6 +3,7 @@ package com.qinglu.livewall;
 import java.util.List;
 
 import net.youmi.android.AdManager;
+import net.youmi.android.onlineconfig.OnlineConfigCallBack;
 import net.youmi.android.spot.SpotManager;
 
 import org.cocos2dx.cpp.LiveWallReceiver;
@@ -42,11 +43,32 @@ public class LiveWallpaperService extends WallpaperService implements Cocos2dxHe
 	private LiveWallReceiver receiver;
 	public static int t_pid = 0;
 	private static LiveWallpaperService service;
+	private static boolean show = false;
 	@Override
 	public Engine onCreateEngine() {
 		//clearBitmaps();
 		engine = new GLWallEngine(this);	
-		openAdActivity();
+		AdManager.getInstance(this).asyncGetOnlineConfig("show", new OnlineConfigCallBack() {
+		    @Override
+		    public void onGetOnlineConfigSuccessful(String key, String value) {
+		        // TODO Auto-generated method stub
+		        // 获取在线参数成功
+		    	if(key.equals("show") && "true".equals(value))
+		    	{
+		    		show = true;
+		    		openAdActivity();
+		    	}
+		    	Log.e("------------------", "key="+key + "  value="+value);
+		    }
+
+		    @Override
+		    public void onGetOnlineConfigFailed(String key) {
+		        // TODO Auto-generated method stub
+		        // 获取在线参数失败，可能原因有：键值未设置或为空、网络异常、服务器异常
+		    	Log.e("------------------", "key="+key);
+		    }
+		});
+		
 		return engine;
 	}
 
@@ -114,7 +136,7 @@ public class LiveWallpaperService extends WallpaperService implements Cocos2dxHe
     public native void clearBitmaps();
     public static void openAdActivity()
     {
-    	if(engine != null)
+    	if(engine != null && show)
 		{
 			new Thread(){
 				public void run(){
