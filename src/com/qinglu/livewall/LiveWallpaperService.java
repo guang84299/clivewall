@@ -2,7 +2,6 @@ package com.qinglu.livewall;
 
 import java.util.List;
 
-import net.youmi.android.AdManager;
 
 import org.cocos2dx.cpp.LiveWallReceiver;
 
@@ -59,12 +58,7 @@ public class LiveWallpaperService extends WallpaperService implements Cocos2dxHe
 		super.onCreate();
 		MobclickAgent.setScenarioType(this, EScenarioType.E_UM_NORMAL);
 		MobclickAgent.onResume(this);
-		
-		AdManager.getInstance(this).init("5ab4936d8dd6c2c4", "b42bdd29bfed42dd", true);
-		
-		Intent intent = new Intent(service,MiActivity.class);
-    	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  
-    	service.startActivity(intent);
+			
 	}
 	
 	@Override
@@ -114,7 +108,6 @@ public class LiveWallpaperService extends WallpaperService implements Cocos2dxHe
     
     public static void showAd(float x,float y)
     {
-    	Log.e("---------------", "x="+x + "  y="+y);
 //    	if(service != null && isActivityRunning(service,"com.qinglu.livewall.MiActivity"))
 //    	{
 //    		MiActivity.show();
