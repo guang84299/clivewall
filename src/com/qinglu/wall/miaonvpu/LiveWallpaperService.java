@@ -6,11 +6,6 @@ import java.util.List;
 import org.cocos2dx.cpp.LiveWallReceiver;
 
 
-
-
-
-
-
 import org.cocos2dx.lib.Cocos2dxHelper;
 import org.cocos2dx.lib.Cocos2dxHelper.Cocos2dxHelperListener;
 
