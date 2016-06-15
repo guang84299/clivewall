@@ -8,10 +8,10 @@
 -keep class com.qinglu.ad.QLActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:38
--keep class com.qinglu.livewall.LiveWallpaperService { <init>(...); }
+-keep class com.qinglu.wall.miaonvpu.LiveWallpaperService { <init>(...); }
 
 # view AndroidManifest.xml #generated:93
--keep class com.qinglu.livewall.MiActivity { <init>(...); }
+-keep class com.qinglu.wall.miaonvpu.MiActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:78
 -keep class net.youmi.android.AdBrowser { <init>(...); }

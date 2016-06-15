@@ -1,7 +1,7 @@
 package org.cocos2dx.cpp;
 
 
-import com.qinglu.livewall.R;
+import com.qinglu.wall.miaonvpu.R;
 
 import android.app.Activity;
 import android.app.WallpaperInfo;
@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		boolean b = isLiveWallpaperRunning(this,"com.qinglu.livewall");
+		boolean b = isLiveWallpaperRunning(this,"com.qinglu.wall.miaonvpu");
 		if(b)
 		{
 			Toast.makeText(this, "壁纸已经在运行了！", 1).show();
@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 		else
 		{
 			final ComponentName componentName = new ComponentName(this.getPackageName(),  
-					"com.qinglu.livewall.LiveWallpaperService");  
+					"com.qinglu.wall.miaonvpu.LiveWallpaperService");  
 		
 			Intent intents = new Intent();  
 			//intents.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);   

@@ -5,4 +5,4 @@
     android:thumbnail="@drawable/icon" 
     android:description="@string/app_name"
    />
-<!--  android:settingsActivity="com.qinglu.livewall.MainActivity" -->
+<!--  android:settingsActivity="com.qinglu.wall.miaonvpu.MainActivity" -->

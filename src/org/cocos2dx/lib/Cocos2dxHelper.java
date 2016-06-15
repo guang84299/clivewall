@@ -44,9 +44,9 @@ import android.view.WindowManager;
 
 import com.chukong.cocosplay.client.CocosPlayClient;
 import com.enhance.gameservice.IGameTuningService;
-import com.qinglu.livewall.GLWallEngine;
-import com.qinglu.livewall.LiveWallpaperPainting;
-import com.qinglu.livewall.LiveWallpaperService;
+import com.qinglu.wall.miaonvpu.GLWallEngine;
+import com.qinglu.wall.miaonvpu.LiveWallpaperPainting;
+import com.qinglu.wall.miaonvpu.LiveWallpaperService;
 
 import java.io.UnsupportedEncodingException;
 import java.util.LinkedHashSet;
