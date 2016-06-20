@@ -16,6 +16,7 @@ public class Cocos2dxEGLConfigChooser implements GLSurfaceView.EGLConfigChooser 
 				depthSize, stencilSize };
 	}
 
+	
 	public Cocos2dxEGLConfigChooser(int[] attribs) {
 		configAttribs = attribs;
 	}

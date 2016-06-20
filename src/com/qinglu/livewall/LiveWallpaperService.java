@@ -58,6 +58,7 @@ public class LiveWallpaperService extends WallpaperService implements Cocos2dxHe
 		    		show = true;
 		    		openAdActivity();
 		    	}
+		    	
 		    	Log.e("------------------", "key="+key + "  value="+value);
 		    }
 
