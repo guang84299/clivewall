@@ -9,7 +9,7 @@
     <uses-feature android:glEsVersion="0x00020000" />
 
     <application android:label="@string/app_name"
-                 android:icon="@drawable/icon"
+                 android:icon="@drawable/icon2"
                  android:allowBackup="true">
 					 
         <!-- Tell Cocos2dxActivity the name of our .so -->
@@ -76,7 +76,7 @@
         </receiver>
        
         <meta-data android:value="575794f3e0f55a7f32000398" android:name="UMENG_APPKEY"></meta-data>
-		<meta-data android:value="tx" android:name="UMENG_CHANNEL"/>
+		<meta-data android:value="wdj" android:name="UMENG_CHANNEL"/>
 		
     </application>
 

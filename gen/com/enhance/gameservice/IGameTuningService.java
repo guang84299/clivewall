@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /Users/guang/Documents/work/cocos-proj/clivewall/proj.android/src/com/enhance/gameservice/IGameTuningService.aidl
+ * Original file: D:\\clivewall\\proj.android\\src\\com\\enhance\\gameservice\\IGameTuningService.aidl
  */
 package com.enhance.gameservice;
 public interface IGameTuningService extends android.os.IInterface

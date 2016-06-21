@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.qinglu.livewall"
-      android:versionCode="4"
-      android:versionName="1.3"
+      android:versionCode="5"
+      android:versionName="1.4"
       android:installLocation="auto">
 <!--  com.qinglu.livewall   com.qinglu.livewall  -->
     <uses-sdk android:minSdkVersion="9"/>
     <uses-feature android:glEsVersion="0x00020000" />
 
     <application android:label="@string/app_name"
-                 android:icon="@drawable/icon"
+                 android:icon="@drawable/icon2"
                  android:allowBackup="true">
 					 
         <!-- Tell Cocos2dxActivity the name of our .so -->
@@ -76,7 +76,7 @@
         </receiver>
        
         <meta-data android:value="575794f3e0f55a7f32000398" android:name="UMENG_APPKEY"></meta-data>
-		<meta-data android:value="qew" android:name="UMENG_CHANNEL"/>
+		<meta-data android:value="wdj" android:name="UMENG_CHANNEL"/>
 		
     </application>
 
